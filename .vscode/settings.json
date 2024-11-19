@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "ostream": "cpp"
+    },
+    "files.exclude": {
+        "**/.git/**": true,
+    },
+    "search.exclude": {
+        "**/bin/**": true,
+        "**/build/**": true,
+        "**/.git/**": true,
+    },
+}

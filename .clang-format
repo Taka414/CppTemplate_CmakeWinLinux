@@ -1,0 +1,100 @@
+# - - - - - - - - - - - - - - - - - - - -
+# ★オートフォーマットの書式の定義
+# 
+# VSCode:
+# 1) このファイルをプロジェクトのルートに配置し
+# 2) Shift+Alt+Fでオートフォーマットが走るようになる
+#    ** オプションでOnSave、OnPastなど指定できるが共用環境では設定しないほうがいい
+# 
+# - - - - - - - - - - - - - - - - - - - -
+
+# デフォルト設定
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options
+# C#風の中かっこの直後は改行する基本スタイルを踏襲する
+BasedOnStyle: Microsoft
+
+# インデント幅
+IndentWidth: 4
+
+# 変換結果のファイルでのタブの使用について指定する
+# Never: タブは使用しない
+UseTab: Never
+
+# 自動改行させない
+# ** 120文字を超えてたら自動改行しない
+ColumnLimit: 0
+
+# 構造体配列の初期化子について、整列方向を指定する。
+AlignArrayOfStructures: Right
+
+# 連続する空行を最大何行保持するか（制御ブロック開始後限定）
+# 3行以上の連続する空白は削除
+MaxEmptyLinesToKeep: 3
+
+# *と&の位置の指定
+# Sample* pValue
+# Sample& refValue ★Left=左に寄せる
+PointerAlignment: Left
+
+# クラス定義に対する括弧の制御方法を指定する。
+#   class foo
+#   { ★true=クラスの始まりの中カッコを改行する
+# AfterClass: true
+
+# ステートメント(if、for、while、switch等)に対する括弧の制御方法を指定する。
+#   if (foo())
+#   { ★Always=ステートメントに対する中カッコを常に改行する
+# AfterControlStatement: Always
+
+# switch文のケースラベルのインデントを指定する。
+# switch (foo) {
+# case 1: ★false=ここがインデントされない
+# {
+IndentCaseLabels: true
+
+# 短いcase節は1行にまとめる
+AllowShortCaseLabelsOnASingleLine: true
+
+# C++11の初期化リストのフォーマットを指定する。
+# vector<int> x{1, 2, 3, 4};
+# vector<int> x{ 1, 2, 3, 4 }; ★false=このように空白が挿入される
+Cpp11BracedListStyle: false
+
+# 改行コードをLFに統一する
+# UseCRLF: false
+LineEnding: DeriveLF
+
+# クラスのアクセス修飾子をインデントしない
+# class Sample
+# {
+# public: ★false: ここのインデントを-4すると見かけ上インデントされないことになる
+#
+AccessModifierOffset: -4
+
+BraceWrapping:
+  # ラムダ式の開始を改行する
+  # [&]() { ★ここを改行しない
+  #    // ...
+  BeforeLambdaBody: false
+  # caseラベルに対する括弧の制御方法を指定する。
+  # switch (foo) {
+  #   case 1:
+  #   { ★true=ここの中カッコを改行する
+  #     bar();
+  #     break;
+  #   }
+  #   default:
+  #   {
+  #     plop();
+  #   }
+  # }
+  AfterCaseLabel: true
+
+# 短いブロック ({}) を1行にまとめるかどうかを指定
+# Sample() { } // ★インラインで書いていたらそのスタイルのままになってる
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortLambdasOnASingleLine: Inline
+
+# 特定のコンテキストで中かっこが連続する場合1文字空白を挿入する
+# {} -> { }
+SpaceInEmptyBlock: true

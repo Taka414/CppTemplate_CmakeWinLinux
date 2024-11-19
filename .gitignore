@@ -1,0 +1,6 @@
+bin/debug/
+bin/release/
+/__pycache__/
+.pyc
+venv/
+build/vsSolution/
