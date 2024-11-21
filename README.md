@@ -94,4 +94,18 @@ VS2022用の構成を作成する
 
 
 
+### Linuxでデバッグ実行する場合
+
+あらかじめ`linux-build-debug.sh`を一度は実行しておくこと。
+
+実行せずにプロジェクトをF5でいきなり開始するとコンソールにいかのようなエラーメッセージが表示されデバッグが実行できない。
+
+```
+ *  実行するタスク: cmake --build /home/takap/workspace/cpp-template/CppTemplate_CmakeWinLinux/build/debug --config Debug 
+
+Error: could not load cache
+```
+
+
+
 【EOL】
