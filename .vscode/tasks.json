@@ -7,7 +7,7 @@
             "command": "cmake",
             "args": [
                 "--build", "${workspaceFolder}/build/debug",
-                "--config", "Debug" // or "Release"
+                "--config", "Debug"
             ],
             "group": {
                 "kind": "build",
