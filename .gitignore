@@ -4,3 +4,4 @@ bin/release/
 .pyc
 venv/
 build/vsSolution/
+build/
